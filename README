@@ -1,0 +1,19 @@
+This is unstable software I developed in a hurry while learning Clojure.
+Use it at your own risk!
+
+It worked for me to migrate my Google Notebook items to Delicious, if you want
+to try it yourself, just run
+
+./bin/repl.sh
+
+and you'll be prompted for the path to the HTML export of your Google Notebook,
+and for your delicious credentials.
+Beware: password is displayed on screen when typed!!
+
+All items created in delicious have the tag google-notebook-import, which lets
+you easily identify them, to possibly delete them if migration failed.
+All items created are private.
+
+The apache  httpclient jar has been modified to accept cookies from other
+domains, which was needed here (requests sent to del.icio.us, cookie's domain
+is delicious.com). You can find it as http://www.nsa.be/nb_exporter
